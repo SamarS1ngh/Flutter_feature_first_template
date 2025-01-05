@@ -1,9 +1,12 @@
 import 'dart:developer';
 import 'package:feature_based/data/remote/network/base_api_service.dart';
 import 'package:feature_based/data/remote/network/network_api_service.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class Provider1 extends ChangeNotifier {
+class Provider1 extends Notifier<int> {
+  @override
+  int build() => return 0;
+  
   BaseApiService repo = NetworkApiService();
 
   void doSomethingAfterGettingDataFromAPI() {
